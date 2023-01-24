@@ -5,15 +5,16 @@ public class CreditoVista implements TaxaMaquininha{
     double taxa = 0.099;
     double vendaProduto;
 
-    double valorPago = 0.901;
+    double valorPago = 0.00901;
 
 
     public Double getValorTaxa(){
-        return taxa;
+        return valorPago * vendaProduto;
     };
 
     public double valorTotal(){
-        return valorPago * vendaProduto;
+        double x = valorPago * vendaProduto;
+        return vendaProduto - x;
     }
 
     public double getTaxa() {
