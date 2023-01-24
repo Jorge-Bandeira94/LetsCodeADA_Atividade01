@@ -7,16 +7,17 @@ public class Credito implements TaxaMaquininha {
     double parcelado = 0.1;
     double vendaProduto;
 
-    double valorPago = 0.9;
+    double valorPago = 0.09;
 
 
     @Override
     public Double getValorTaxa() {
-        return parcelado;
+        return valorPago * vendaProduto;
     }
 
     public Double valorTotal(){
-        return  valorPago * vendaProduto;
+        double x = valorPago * vendaProduto;
+        return vendaProduto - x;
     }
 
     public double getParcelado() {
