@@ -5,15 +5,16 @@ public class Debito implements TaxaMaquininha{
     double taxa = 0.095;
     double vendaProduto;
 
-    double valorPago = 0.905;
+    double valorPago = 0.0095;
 
     @Override
     public Double getValorTaxa() {
-        return taxa;
+        return valorPago * vendaProduto;
     }
 
     public Double valorTotal(){
-        return valorPago * vendaProduto;
+        double x = valorPago * vendaProduto;
+        return vendaProduto - x;
     }
 
     public double getTaxa() {
